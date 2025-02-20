@@ -1,15 +1,40 @@
-游戏对象: Player
+游戏对象: Message
 - 组件:
-  - Transform
-  - BoxCollider2D
-  - SpriteRenderer
-  - PlayerController
-  - Rigidbody2D
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
 
-游戏对象: Map
+游戏对象: Discussion Bubble
 - 组件:
-  - Transform
-  - SpriteRenderer
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ContentSizeFitter
+  - VerticalLayoutGroup
+  - DiscussionBubble
+子对象: Message
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Bottom Container
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: Prompt Input Field
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+    - TMP_InputField
+子对象: Ask Button
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+    - Button
 
 游戏对象: Item (3)
 - 组件:
@@ -23,6 +48,37 @@
   - SpriteRenderer
   - BoxCollider2D
 
+游戏对象: Content
+- 组件:
+  - RectTransform
+  - ContentSizeFitter
+  - VerticalLayoutGroup
+  - ContentAutoScroll
+
+游戏对象: Frame
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - Mask
+子对象: Bottom Container
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: Scroll View
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+    - ScrollRect
+
+游戏对象: Discussion Manager
+- 组件:
+  - Transform
+  - NPCDialog
+      - npcName: NPC
+
 游戏对象: Main Camera
 - 组件:
   - Transform
@@ -33,6 +89,29 @@
   - 组件:
     - Transform
     - CinemachineVirtualCamera
+
+游戏对象: Canvas
+- 组件:
+  - RectTransform
+  - Canvas
+  - CanvasScaler
+  - GraphicRaycaster
+子对象: Frame
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+    - Mask
+子对象: Frame Outline
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: Discussion Manager
+  - 组件:
+    - Transform
+    - NPCDialog
+      - npcName: NPC
 
 游戏对象: Virtual Camera
 - 组件:
@@ -50,11 +129,59 @@
   - SpriteRenderer
   - BoxCollider2D
 
+游戏对象: Text (TMP)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Text
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+  - LayoutElement
+
+游戏对象: Ask Button
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - Button
+子对象: Text (TMP)
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
 游戏对象: GameManager
 - 组件:
   - Transform
   - SceneExporter
   - EnemySpawner
+
+游戏对象: Text Area
+- 组件:
+  - RectTransform
+  - RectMask2D
+子对象: Caret
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TMP_SelectionCaret
+    - LayoutElement
+子对象: Text
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+    - LayoutElement
+子对象: PlaceHolder Text
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+    - LayoutElement
 
 游戏对象: Object
 - 组件:
@@ -80,15 +207,84 @@
     - SpriteRenderer
     - BoxCollider2D
 
+游戏对象: EventSystem
+- 组件:
+  - Transform
+  - EventSystem
+  - StandaloneInputModule
+
+游戏对象: Scroll View
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ScrollRect
+子对象: Viewport
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+    - Mask
+
 游戏对象: Item (2)
 - 组件:
   - Transform
   - SpriteRenderer
   - BoxCollider2D
 
+游戏对象: Frame Outline
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
 游戏对象: cm
 - 组件:
   - Transform
   - CinemachinePipeline
   - CinemachineFramingTransposer
+
+游戏对象: PlaceHolder Text
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+  - LayoutElement
+
+游戏对象: Viewport
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - Mask
+子对象: Content
+  - 组件:
+    - RectTransform
+    - ContentSizeFitter
+    - VerticalLayoutGroup
+    - ContentAutoScroll
+
+游戏对象: Prompt Input Field
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - TMP_InputField
+子对象: Text Area
+  - 组件:
+    - RectTransform
+    - RectMask2D
+
+游戏对象: Map
+- 组件:
+  - Transform
+  - SpriteRenderer
+
+游戏对象: Player
+- 组件:
+  - Transform
+  - BoxCollider2D
+  - SpriteRenderer
+  - PlayerController
+  - Rigidbody2D
 

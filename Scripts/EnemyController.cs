@@ -30,14 +30,14 @@ public class EnemyController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // 检测是否与玩家碰撞
-        if (collision.gameObject.CompareTag("Player"))
+        /*if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("玩家被敌人捕获，游戏结束！");
             Application.Quit(); // 退出游戏
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false; // 在编辑器模式下停止运行
 #endif
-        }
+        }*/
     }
 
     private Vector2 GetRandomSpawnPosition()
