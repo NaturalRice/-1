@@ -39,29 +39,4 @@ public class UIManager : MonoBehaviour
         mpMaskImage.rectTransform.SetSizeWithCurrentAnchors(
             RectTransform.Axis.Horizontal, fillPercent * originalSize);
     }
-    
-    void Update()
-    {
-        // 检查玩家是否按下了Esc键
-        if (Input.GetKeyDown(KeyCode.Escape))
-            TalkPanelGo0.SetActive(!TalkPanelGo0.activeSelf);//玩家面板可随时打开关闭
-
-        // 检查玩家是否按下了Delete键
-        if (Input.GetKeyDown(KeyCode.Delete))
-        {
-            QuitGame();
-        }
-    }
-    
-    /// <summary>
-    /// 退出游戏
-    /// </summary>
-    private void QuitGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // 在编辑器模式下停止播放
-#else
-    Application.Quit(); // 在发布的游戏中退出
-#endif
-    }
 }

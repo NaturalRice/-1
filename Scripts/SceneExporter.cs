@@ -140,9 +140,6 @@ public class SceneExporter : MonoBehaviour
                 }
             }
         }
-
-
-
     }
     
 }

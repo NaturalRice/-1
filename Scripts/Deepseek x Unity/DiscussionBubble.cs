@@ -12,8 +12,8 @@ public class DiscussionBubble : MonoBehaviour
 {
     // 用于显示消息和气泡的UI元素。
     [Header(" Elements ")]
-    [SerializeField] private TextMeshProUGUI messageText;
-    [SerializeField] private Image bubbleImage;
+    [SerializeField] public TextMeshProUGUI messageText;
+    [SerializeField] public Image bubbleImage;
     [SerializeField] private Sprite userBubbleSprite;
 
     // 用于自定义用户消息外观的设置。

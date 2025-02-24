@@ -100,6 +100,8 @@ public class NPCDialog : MonoBehaviour
         }
     }
     
+    private Dictionary<string, string> commandCache = new Dictionary<string, string>();
+    
     /// <summary>
     /// 创建消息气泡。
     /// </summary>
