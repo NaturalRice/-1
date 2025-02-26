@@ -1,9 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // 玩家移动速度
     public SpriteRenderer mapBounds; // 地图的SpriteRenderer组件
+    
+    public ToolbarUI toolbarUI;
 
     void Update()
     {
@@ -28,13 +32,19 @@ public class PlayerController : MonoBehaviour
         // 更新玩家位置
         transform.position = newPosition;
 
-        // 检查玩家是否按下了Esc键
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // 检查玩家是否按下了Tab键
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Debug.Log("Escape key pressed!");
             if (UIManager.Instance != null && UIManager.Instance.TalkPanelGo0 != null)
             {
-                UIManager.Instance.TalkPanelGo0.SetActive(!UIManager.Instance.TalkPanelGo0.activeSelf); // 玩家面板可随时打开关闭
+                if (UIManager.Instance.TalkPanelGo0.activeSelf)
+                {
+                    UIManager.Instance.CloseTalkPanel();
+                }
+                else
+                {
+                    UIManager.Instance.OpenTalkPanel();
+                }
             }
             else
             {
@@ -49,7 +59,28 @@ public class PlayerController : MonoBehaviour
             QuitGame();
         }
     }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Pickable")
+        {
+            InventoryManager.Instance.AddToBackpack(collision.GetComponent<Pickable>().type);
+            Destroy(collision.gameObject);
 
+        }
+    }
+
+    public void ThrowItem(GameObject itemPrefab,int count)
+    {
+        for(int i = 0; i < count; i++)
+        {
+            GameObject go =  GameObject.Instantiate(itemPrefab);
+            Vector2 direction = Random.insideUnitCircle.normalized * 1.2f;
+            go.transform.position = transform.position + new Vector3(direction.x,direction.y,0);
+            go.GetComponent<Rigidbody2D>().AddForce(direction*3);
+        }
+    }
+    
     private void QuitGame()
     {
         Debug.Log("QuitGame method called!");
