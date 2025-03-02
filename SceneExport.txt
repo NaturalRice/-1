@@ -1,95 +1,22 @@
-游戏对象: SlotUI (23)
+游戏对象: Hoe
 - 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
+  - Transform
+  - SpriteRenderer
+  - BoxCollider2D
+  - Rigidbody2D
+  - Pickable
 
-游戏对象: CountText
+游戏对象: Item (3)
 - 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
+  - Transform
+  - SpriteRenderer
+  - BoxCollider2D
 
 游戏对象: Icon
 - 组件:
   - RectTransform
   - CanvasRenderer
   - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (22)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (21)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
 
 游戏对象: Icon
 - 组件:
@@ -114,7 +41,239 @@
     - CanvasRenderer
     - TextMeshProUGUI
 
-游戏对象: SlotUI (19)
+游戏对象: Item
+- 组件:
+  - Transform
+  - SpriteRenderer
+  - BoxCollider2D
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: SlotUI (23)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: SlotGrid
+- 组件:
+  - RectTransform
+  - GridLayoutGroup
+  - ContentSizeFitter
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: SlotUI (14)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Main Camera
+- 组件:
+  - Transform
+  - Camera
+  - AudioListener
+  - CinemachineBrain
+子对象: Virtual Camera
+  - 组件:
+    - Transform
+    - CinemachineVirtualCamera
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: SlotUI (5)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: SlotUI (16)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Virtual Camera
+- 组件:
+  - Transform
+  - CinemachineVirtualCamera
+子对象: cm
+  - 组件:
+    - Transform
+    - CinemachinePipeline
+    - CinemachineFramingTransposer
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: SlotUI (21)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: EventSystem
+- 组件:
+  - Transform
+  - EventSystem
+  - StandaloneInputModule
+
+游戏对象: Item (1)
+- 组件:
+  - Transform
+  - SpriteRenderer
+  - BoxCollider2D
+
+游戏对象: SlotUI (6)
 - 组件:
   - RectTransform
   - CanvasRenderer
@@ -137,6 +296,138 @@
   - CanvasRenderer
   - TextMeshProUGUI
 
+游戏对象: SlotUI (8)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: SlotUI (7)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: SlotUI (2)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: SlotUI (22)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: GameManager
+- 组件:
+  - Transform
+  - SceneExporter
+  - InventoryManager
+  - GenerateTexture
+子对象: NPCSpawner
+  - 组件:
+    - Transform
+    - NPCDynamicSpawner
+子对象: EnemySpawner
+  - 组件:
+    - Transform
+    - EnemySpawner
+    - EnemyController
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: Object
+- 组件:
+  - Transform
+子对象: Item
+  - 组件:
+    - Transform
+    - SpriteRenderer
+    - BoxCollider2D
+子对象: Item (1)
+  - 组件:
+    - Transform
+    - SpriteRenderer
+    - BoxCollider2D
+子对象: Item (2)
+  - 组件:
+    - Transform
+    - SpriteRenderer
+    - BoxCollider2D
+子对象: Item (3)
+  - 组件:
+    - Transform
+    - SpriteRenderer
+    - BoxCollider2D
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
 游戏对象: Icon
 - 组件:
   - RectTransform
@@ -149,13 +440,53 @@
   - CanvasRenderer
   - TextMeshProUGUI
 
+游戏对象: SlotUI (1)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Item (2)
+- 组件:
+  - Transform
+  - SpriteRenderer
+  - BoxCollider2D
+
+游戏对象: SlotUI (10)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
 游戏对象: Icon
 - 组件:
   - RectTransform
   - CanvasRenderer
   - Image
 
-游戏对象: SlotUI (18)
+游戏对象: SlotUI (15)
 - 组件:
   - RectTransform
   - CanvasRenderer
@@ -189,31 +520,7 @@
     - CanvasRenderer
     - TextMeshProUGUI
 
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (16)
+游戏对象: SlotUI (19)
 - 组件:
   - RectTransform
   - CanvasRenderer
@@ -230,29 +537,6 @@
     - CanvasRenderer
     - TextMeshProUGUI
 
-游戏对象: SlotUI (15)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
 游戏对象: Icon
 - 组件:
   - RectTransform
@@ -264,975 +548,6 @@
   - RectTransform
   - CanvasRenderer
   - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (14)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (13)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (12)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (11)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (10)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (9)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (8)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (7)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (6)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (5)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (4)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (3)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: SlotUI (2)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: SlotUI (1)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - SlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: ToolbarSlotUI (8)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: ToolbarSlotUI (7)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: ToolbarSlotUI (6)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: ToolbarSlotUI (5)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: ToolbarSlotUI (4)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: ToolbarSlotUI (3)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: ToolbarSlotUI (2)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: ToolbarSlotUI (1)
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: NumberText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: NumberBg
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-子对象: NumberText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-
-游戏对象: CountText
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - TextMeshProUGUI
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: ToolbarSlotUI
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-  - ToolbarSlotUI
-子对象: Icon
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-子对象: CountText
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - TextMeshProUGUI
-子对象: NumberBg
-  - 组件:
-    - RectTransform
-    - CanvasRenderer
-    - Image
-
-游戏对象: Hoe
-- 组件:
-  - Transform
-  - SpriteRenderer
-  - BoxCollider2D
-  - Rigidbody2D
-  - Pickable
-
-游戏对象: Item (3)
-- 组件:
-  - Transform
-  - SpriteRenderer
-  - BoxCollider2D
-
-游戏对象: Item
-- 组件:
-  - Transform
-  - SpriteRenderer
-  - BoxCollider2D
-
-游戏对象: SlotGrid
-- 组件:
-  - RectTransform
-  - GridLayoutGroup
-  - ContentSizeFitter
-
-游戏对象: Icon
-- 组件:
-  - RectTransform
-  - CanvasRenderer
-  - Image
-
-游戏对象: Main Camera
-- 组件:
-  - Transform
-  - Camera
-  - AudioListener
-  - CinemachineBrain
-子对象: Virtual Camera
-  - 组件:
-    - Transform
-    - CinemachineVirtualCamera
-
-游戏对象: Virtual Camera
-- 组件:
-  - Transform
-  - CinemachineVirtualCamera
-子对象: cm
-  - 组件:
-    - Transform
-    - CinemachinePipeline
-    - CinemachineFramingTransposer
-
-游戏对象: EventSystem
-- 组件:
-  - Transform
-  - EventSystem
-  - StandaloneInputModule
-
-游戏对象: Item (1)
-- 组件:
-  - Transform
-  - SpriteRenderer
-  - BoxCollider2D
-
-游戏对象: GameManager
-- 组件:
-  - Transform
-  - SceneExporter
-  - InventoryManager
-子对象: NPCSpawner
-  - 组件:
-    - Transform
-    - NPCDynamicSpawner
-子对象: EnemySpawner
-  - 组件:
-    - Transform
-    - EnemySpawner
-    - EnemyController
-
-游戏对象: Object
-- 组件:
-  - Transform
-子对象: Item
-  - 组件:
-    - Transform
-    - SpriteRenderer
-    - BoxCollider2D
-子对象: Item (1)
-  - 组件:
-    - Transform
-    - SpriteRenderer
-    - BoxCollider2D
-子对象: Item (2)
-  - 组件:
-    - Transform
-    - SpriteRenderer
-    - BoxCollider2D
-子对象: Item (3)
-  - 组件:
-    - Transform
-    - SpriteRenderer
-    - BoxCollider2D
-
-游戏对象: Item (2)
-- 组件:
-  - Transform
-  - SpriteRenderer
-  - BoxCollider2D
 
 游戏对象: Canvas
 - 组件:
@@ -1276,6 +591,64 @@
     - RectTransform
     - ItemMoveHandler
 
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: SlotUI (13)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: SlotUI (11)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
 游戏对象: CountText
 - 组件:
   - RectTransform
@@ -1288,22 +661,232 @@
   - EnemySpawner
   - EnemyController
 
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: SlotUI (3)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
 游戏对象: cm
 - 组件:
   - Transform
   - CinemachinePipeline
   - CinemachineFramingTransposer
 
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
 游戏对象: NPCSpawner
 - 组件:
   - Transform
   - NPCDynamicSpawner
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: SlotUI (18)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: SlotUI (4)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: SlotUI (9)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: SlotUI (12)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - SlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
 
 游戏对象: Img_HP
 - 组件:
   - RectTransform
   - CanvasRenderer
   - Image
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
 
 游戏对象: SlotGrid
 - 组件:
@@ -1454,10 +1037,49 @@
     - Image
     - SlotUI
 
+游戏对象: ToolbarSlotUI (7)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
 游戏对象: Map
 - 组件:
   - Transform
   - SpriteRenderer
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
 
 游戏对象: CloseButton
 - 组件:
@@ -1466,7 +1088,25 @@
   - Image
   - Button
 
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
 游戏对象: Bg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Icon
 - 组件:
   - RectTransform
   - CanvasRenderer
@@ -1561,6 +1201,28 @@
   - CanvasRenderer
   - Image
 
+游戏对象: ToolbarSlotUI (3)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
 游戏对象: SlotUI
 - 组件:
   - RectTransform
@@ -1578,11 +1240,29 @@
     - CanvasRenderer
     - TextMeshProUGUI
 
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
 游戏对象: Bg_Right
 - 组件:
   - RectTransform
   - CanvasRenderer
   - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
 
 游戏对象: Bg
 - 组件:
@@ -1602,6 +1282,17 @@
     - RectTransform
     - CanvasRenderer
     - Image
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
 
 游戏对象: ParentUI
 - 组件:
@@ -1641,11 +1332,84 @@
   - 组件:
     - RectTransform
 
+游戏对象: ToolbarSlotUI (6)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: ToolbarSlotUI (2)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
 游戏对象: Img_HP
 - 组件:
   - RectTransform
   - CanvasRenderer
   - Image
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
 
 游戏对象: Img_Mask
 - 组件:
@@ -1674,6 +1438,12 @@
   - CanvasRenderer
   - Image
 
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
 游戏对象: Img_MPBar
 - 组件:
   - RectTransform
@@ -1685,6 +1455,39 @@
     - CanvasRenderer
     - Image
     - Mask
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: ToolbarSlotUI
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
 
 游戏对象: ParentUI
 - 组件:
@@ -1699,11 +1502,154 @@
     - RectTransform
     - HorizontalLayoutGroup
 
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
 游戏对象: Text_Name
 - 组件:
   - RectTransform
   - CanvasRenderer
   - Text
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: ToolbarSlotUI (4)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: Icon
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: NumberText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
+
+游戏对象: ToolbarSlotUI (1)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
+游戏对象: CountText
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - TextMeshProUGUI
 
 游戏对象: Bg_Left
 - 组件:
@@ -1749,6 +1695,61 @@
     - CanvasRenderer
     - Image
 子对象: Img_MPBar
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
+游戏对象: NumberBg
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+子对象: NumberText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+
+游戏对象: ToolbarSlotUI (5)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+
+游戏对象: ToolbarSlotUI (8)
+- 组件:
+  - RectTransform
+  - CanvasRenderer
+  - Image
+  - ToolbarSlotUI
+子对象: Icon
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - Image
+子对象: CountText
+  - 组件:
+    - RectTransform
+    - CanvasRenderer
+    - TextMeshProUGUI
+子对象: NumberBg
   - 组件:
     - RectTransform
     - CanvasRenderer

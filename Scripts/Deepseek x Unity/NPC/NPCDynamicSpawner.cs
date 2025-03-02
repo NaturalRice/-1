@@ -29,8 +29,8 @@ public class NPCDynamicSpawner : MonoBehaviour
     void Update()
     {
 #if UNITY_EDITOR
-        Debug.Log($"当前NPC数量：{activeNPCs.Count}");
-        Debug.Log($"内存占用：{UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong() / 1024}KB");
+        //Debug.Log($"当前NPC数量：{activeNPCs.Count}");
+        //Debug.Log($"内存占用：{UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong() / 1024}KB");
 #endif
     }
 
@@ -63,8 +63,9 @@ public class NPCDynamicSpawner : MonoBehaviour
         ai.Initialize(GetRandomBehavior());
 
         NPCDialog dialog = npc.AddComponent<NPCDialog>();
+        dialog.apiKey = new string[] { "sk-1e2e119a79a14ca1bae80cf4f99a8b0f" }; // 动态注入API Key
         ConfigureDialogComponents(dialog);
-
+        
         npc.AddComponent<NPCLifeTracker>().OnDestroyed += () => activeNPCs.Remove(npc);
         activeNPCs.Add(npc);
     }
@@ -103,9 +104,23 @@ public class NPCDynamicSpawner : MonoBehaviour
         GameObject bubble = new GameObject("Bubble");
         bubble.transform.SetParent(dialog.transform);
 
-        DiscussionBubble bubbleComp = bubble.AddComponent<DiscussionBubble>();
-        bubbleComp.messageText = bubble.AddComponent<TextMeshProUGUI>();
-        bubbleComp.bubbleImage = bubble.AddComponent<Image>();
+        // 添加 Image 组件到父对象
+        Image bubbleImage = bubble.AddComponent<Image>();
+        bubbleImage.sprite = dialog.userBubbleSprite; // 根据需要设置默认贴图
+
+        // 创建子对象用于显示文本
+        GameObject textObject = new GameObject("Text");
+        textObject.transform.SetParent(bubble.transform);
+        TextMeshProUGUI textComponent = textObject.AddComponent<TextMeshProUGUI>();
+    
+        // 配置文本组件
+        textComponent.alignment = TextAlignmentOptions.MidlineLeft;
+        textComponent.fontSize = 14;
+
+        // 将组件绑定到 NPCDialog
+        DiscussionBubble discussionBubble = bubble.AddComponent<DiscussionBubble>();
+        discussionBubble.messageText = textComponent;
+        discussionBubble.bubbleImage = bubbleImage;
     }
 
     void OnApplicationQuit()

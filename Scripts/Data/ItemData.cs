@@ -7,9 +7,9 @@ public enum ItemType
     None,
     Seed_Carrot,
     Seed_Tomato,
-    Hoe
+    Hoe,
+    CustomAIItem // 新增动态生成道具类型
 }
-
 [CreateAssetMenu()]
 public class ItemData :ScriptableObject
 {
@@ -17,4 +17,5 @@ public class ItemData :ScriptableObject
     public Sprite sprite;
     public GameObject prefab;
     public int maxCount=1;
+    public string description; // 添加描述字段
 }

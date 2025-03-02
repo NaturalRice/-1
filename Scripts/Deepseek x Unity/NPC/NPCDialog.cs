@@ -13,12 +13,16 @@ public class NPCDialog : MonoBehaviour
     [SerializeField] private DiscussionBubble bubblePrefab;
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private Transform bubblesParent;
+    
+    // 在 NPC 属性后添加以下字段
+    [Header("对话气泡设置")]
+    [SerializeField] public Sprite userBubbleSprite; // 用户消息气泡贴图
 
     // 事件
     public static Action onMessageReceived;
 
     // 认证信息
-    [SerializeField] private string[] apiKey;
+    [SerializeField] public string[] apiKey;
     private OpenAIClient api;
 
     // 设置
@@ -47,6 +51,12 @@ public class NPCDialog : MonoBehaviour
 
         // 确保npcName在Start方法中被正确初始化
         //Debug.Log("NPC Name in Start: " + npcName);
+        
+        // 强制启用 IME 输入
+        Input.imeCompositionMode = IMECompositionMode.On;
+        inputField.onSelect.AddListener((text) => {
+            Input.imeCompositionMode = IMECompositionMode.On;
+        });
     }
 
     /// <summary>
@@ -54,6 +64,11 @@ public class NPCDialog : MonoBehaviour
     /// </summary>
     private void Authenticate()
     {
+        if (apiKey == null || apiKey.Length == 0)
+        {
+            Debug.LogError("API Key 未配置！");
+            return;
+        }
         api = new OpenAIClient(new OpenAIAuthentication(apiKey[0]));
     }
 
@@ -71,10 +86,11 @@ public class NPCDialog : MonoBehaviour
     /// </summary>
     public async void AskButtonCallback()
     {
+        string playerRequest = inputField.text;
         // 创建用户消息气泡
-        CreateBubble(inputField.text, true);
+        CreateBubble(playerRequest, true);
 
-        Message prompt = new Message(OpenAI.Role.User, inputField.text);
+        Message prompt = new Message(OpenAI.Role.User, playerRequest);
         chatPrompts.Add(prompt);
 
         inputField.text = "";
@@ -98,6 +114,18 @@ public class NPCDialog : MonoBehaviour
         {
             Debug.Log(e);
         }
+        
+        if (GenerateTexture.Instance != null)
+        {
+            GenerateTexture.Instance.OnPlayerRequestSubmitted(inputField.text);
+        }
+        else
+        {
+            Debug.LogError("GenerateTexture 实例未初始化！");
+        }
+
+        // 清空输入框
+        inputField.text = "";
     }
     
     private Dictionary<string, string> commandCache = new Dictionary<string, string>();

@@ -51,24 +51,36 @@ public class InventoryManager : MonoBehaviour
         ItemData item = GetItemData(type);
         if (item == null) return;
 
-        foreach(SlotData slotData in backpack.slotList)
+        // 遍历背包槽位，找到可添加的位置
+        foreach (SlotData slotData in backpack.slotList)
         {
             if (slotData.item == item && slotData.CanAddItem())
             {
-                slotData.Add();return;
+                slotData.Add();
+                Debug.Log($"道具 {item.name} 已添加到背包");
+                return;
             }
         }
 
+        // 如果没有找到可堆叠的槽位，使用空槽位
         foreach (SlotData slotData in backpack.slotList)
         {
-            if (slotData.count == 0)
+            if (slotData.IsEmpty())
             {
-                slotData.AddItem(item);return;
+                slotData.AddItem(item);
+                Debug.Log($"道具 {item.name} 已添加到新槽位");
+                return;
             }
         }
-
-        Debug.LogWarning("无法放入仓库，你的背包" + backpack + "已满。");
+        Debug.LogWarning("背包已满！");
     }
-
-
+    
+    // 动态注册新ItemData
+    public void RegisterCustomItem(ItemData itemData)
+    {
+        if (!itemDataDict.ContainsKey(itemData.type))
+        {
+            itemDataDict.Add(itemData.type, itemData);
+        }
+    }
 }

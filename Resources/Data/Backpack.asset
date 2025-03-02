@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotList:
   - item: {fileID: 0}
-    count: 0
+    count: 1
   - item: {fileID: 0}
     count: 0
   - item: {fileID: 0}

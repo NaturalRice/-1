@@ -2356,6 +2356,7 @@ MonoBehaviour:
   bubblePrefab: {fileID: 7873314741370968721, guid: 167887776de05a64ab89220a5025dc5b, type: 3}
   inputField: {fileID: 2055394272}
   bubblesParent: {fileID: 248566835}
+  userBubbleSprite: {fileID: 21300000, guid: 8b616f61d73d45a44b82577ee3c5eaba, type: 3}
   apiKey:
   - sk-1e2e119a79a14ca1bae80cf4f99a8b0f
   chatPrompts: []
@@ -4909,6 +4910,7 @@ GameObject:
   - component: {fileID: 1058754363}
   - component: {fileID: 1058754362}
   - component: {fileID: 1058754364}
+  - component: {fileID: 1058754365}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4959,6 +4961,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backpack: {fileID: 0}
   toolbarData: {fileID: 0}
+--- !u!114 &1058754365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058754361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac834f7ee166b648b61eec5b2170e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiKey:
+  - sk-1e2e119a79a14ca1bae80cf4f99a8b0f
+  npcDialog: {fileID: 386146434}
 --- !u!1 &1113764863
 GameObject:
   m_ObjectHideFlags: 0
