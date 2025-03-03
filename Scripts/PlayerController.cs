@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer mapBounds; // 地图的SpriteRenderer组件
     
     public ToolbarUI toolbarUI;
+    
+    private NPCDialog currentInteractableNPC;// 新增字段：当前可交互的NPC
 
     void Update()
     {
@@ -51,6 +53,12 @@ public class PlayerController : MonoBehaviour
                 Debug.LogError("UIManager or TalkPanelGo0 is null!");
             }
         }
+        
+        // 新增：空格键触发对话
+        if (Input.GetKeyDown(KeyCode.Space) && currentInteractableNPC != null)
+        {
+            UIManager.Instance.OpenNPCDialog(currentInteractableNPC);
+        }
 
         // 检查玩家是否按下了Delete键
         if (Input.GetKeyDown(KeyCode.Delete))
@@ -67,6 +75,22 @@ public class PlayerController : MonoBehaviour
             InventoryManager.Instance.AddToBackpack(collision.GetComponent<Pickable>().type);
             Destroy(collision.gameObject);
 
+        }
+        
+        if (collision.CompareTag("NPC"))
+        {
+            // 获取NPC的对话组件
+            currentInteractableNPC = collision.GetComponent<NPCDialog>();
+            Debug.Log("靠近NPC，按空格键对话");
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            currentInteractableNPC = null;
+            Debug.Log("离开NPC");
         }
     }
 

@@ -58,6 +58,7 @@ public class NPCDynamicSpawner : MonoBehaviour
 
         BoxCollider2D collider = npc.AddComponent<BoxCollider2D>();
         collider.size = new Vector2(0.8f, 1.2f);
+        collider.isTrigger = true; // 关键设置！
 
         NPC_AI ai = npc.AddComponent<NPC_AI>();
         ai.Initialize(GetRandomBehavior());

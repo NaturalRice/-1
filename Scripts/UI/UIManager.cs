@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // 添加在文件头部
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class UIManager : MonoBehaviour
 
     public GameObject TalkPanelGo0; // 对话界面
     
+    [Header("NPC Dialog")]
+    public GameObject talkPanel; // 对话面板对象
+    public TMP_InputField inputField; // 输入框引用
+
+    private NPCDialog activeNPC; // 当前对话的NPC
+    
     // 背包相关字段
     public GameObject inventoryPanel;
     public Transform slotGrid;
@@ -19,7 +26,7 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null) Instance = this;
         originalSize = hpMaskImage.rectTransform.rect.width;
         SetHPValue(1);
     }
@@ -35,16 +42,32 @@ public class UIManager : MonoBehaviour
             PauseGame(); // 暂停游戏
         }
     }
+    
+    // 打开NPC专属对话面板
+    public void OpenNPCDialog(NPCDialog npc)
+    {
+        activeNPC = npc;
+        talkPanel.SetActive(true);
+        inputField.text = ""; // 清空输入框
+        PauseGame();
+    }
 
     /// <summary>
     /// 关闭对话界面
     /// </summary>
     public void CloseTalkPanel()
     {
-        if (TalkPanelGo0 != null)
+        activeNPC = null;
+        talkPanel.SetActive(false);
+        ResumeGame();
+    }
+    
+    // 提问按钮回调（绑定到UI按钮）
+    public void OnAskButtonClicked()
+    {
+        if (activeNPC != null && !string.IsNullOrEmpty(inputField.text))
         {
-            TalkPanelGo0.SetActive(false);
-            ResumeGame(); // 恢复游戏
+            activeNPC.AskButtonCallback();
         }
     }
 

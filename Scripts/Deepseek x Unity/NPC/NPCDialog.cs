@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using Random = UnityEngine.Random;
 using OpenAI;
 using OpenAI.Chat;
+using Cysharp.Threading.Tasks;
+using TMPro; // 添加在文件头部
 
 public class NPCDialog : MonoBehaviour
 {
     // UI元素
-    [SerializeField] private DiscussionBubble bubblePrefab;
-    [SerializeField] private TMP_InputField inputField;
+    private DiscussionBubble bubblePrefab;
+    private TMP_InputField inputField;
     [SerializeField] private Transform bubblesParent;
     
     // 在 NPC 属性后添加以下字段
@@ -42,7 +43,12 @@ public class NPCDialog : MonoBehaviour
     {
         // 创建初始消息气泡（该行用于测试）
         //CreateBubble($"你好！我叫{npcName}，是{npcRole}", false);
-        
+        // 动态获取组件
+        inputField = UIManager.Instance.inputField;
+        // 添加空值检查
+        if (inputField == null) Debug.LogError("输入框未分配！");
+        bubblePrefab = Resources.Load<DiscussionBubble>("Prefabs/Discussion Bubble");
+        if (bubblePrefab == null) Debug.LogError("无法加载DiscussionBubble预制体");
         // 进行认证
         Authenticate();
 
@@ -87,45 +93,37 @@ public class NPCDialog : MonoBehaviour
     public async void AskButtonCallback()
     {
         string playerRequest = inputField.text;
-        // 创建用户消息气泡
         CreateBubble(playerRequest, true);
-
-        Message prompt = new Message(OpenAI.Role.User, playerRequest);
-        chatPrompts.Add(prompt);
+        await ProcessNPCResponse(playerRequest); // 改为await调用
 
         inputField.text = "";
+    }
+    
+    // NPCDialog.cs 需补充方法实现
+    private async UniTask ProcessNPCResponse(string request)
+    {
+        Message prompt = new Message(OpenAI.Role.User, request);
+        chatPrompts.Add(prompt);
 
-        ChatRequest request = new ChatRequest(
+        ChatRequest chatRequest = new ChatRequest(
             messages: chatPrompts,
             model: OpenAI.Models.Model.GPT3_5_Turbo,
             temperature: 0.2);
 
         try
         {
-            var result = await api.ChatEndpoint.GetCompletionAsync(request);
-
+            var result = await api.ChatEndpoint.GetCompletionAsync(chatRequest);
             Message chatResult = new Message(OpenAI.Role.Assistant, result.FirstChoice.ToString());
             chatPrompts.Add(chatResult);
-
-            // 创建回复消息气泡
             CreateBubble(result.FirstChoice.ToString(), false);
         }
         catch (Exception e)
         {
-            Debug.Log(e);
+            Debug.LogError($"对话处理失败：{e.Message}");
+            CreateBubble("思考中...请稍后再试", false);
         }
-        
-        if (GenerateTexture.Instance != null)
-        {
-            GenerateTexture.Instance.OnPlayerRequestSubmitted(inputField.text);
-        }
-        else
-        {
-            Debug.LogError("GenerateTexture 实例未初始化！");
-        }
-
-        // 清空输入框
-        inputField.text = "";
+    
+        // 移除重复的生成道具逻辑（原AskButtonCallback中的重复代码）
     }
     
     private Dictionary<string, string> commandCache = new Dictionary<string, string>();
