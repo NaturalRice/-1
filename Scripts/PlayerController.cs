@@ -10,7 +10,15 @@ public class PlayerController : MonoBehaviour
     public ToolbarUI toolbarUI;
     
     private NPCDialog currentInteractableNPC;// 新增字段：当前可交互的NPC
+    
+    private Rigidbody2D rigidbody2d;// 控制角色物理行为的Rigidbody2D组件
 
+    private void Start()
+    {
+        // 获取角色的Rigidbody2D组件
+        rigidbody2d = GetComponent<Rigidbody2D>();
+    }
+    
     void Update()
     {
         // 获取玩家输入
@@ -37,15 +45,33 @@ public class PlayerController : MonoBehaviour
         // 检查玩家是否按下了Tab键
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (UIManager.Instance != null && UIManager.Instance.TalkPanelGo0 != null)
+            if (UIManager.Instance != null)
             {
-                if (UIManager.Instance.TalkPanelGo0.activeSelf)
+                if (UIManager.Instance.TalkPanelGo1.activeSelf && UIManager.Instance.TalkPanelGo1 != null)
                 {
-                    UIManager.Instance.CloseTalkPanel();
+                    UIManager.Instance.TalkPanelGo1.SetActive(false);
+                    UIManager.Instance.ResumeGame();
+                }
+                else if (UIManager.Instance.TalkPanelGo2.activeSelf && UIManager.Instance.TalkPanelGo2 != null)
+                {
+                    UIManager.Instance.TalkPanelGo2.SetActive(false);
+                    UIManager.Instance.ResumeGame();
+                }
+                else if (UIManager.Instance.TalkPanelGo3.activeSelf && UIManager.Instance.TalkPanelGo3 != null)
+                {
+                    UIManager.Instance.TalkPanelGo3.SetActive(false);
+                    UIManager.Instance.ResumeGame();
                 }
                 else
                 {
-                    UIManager.Instance.OpenTalkPanel();
+                    if (UIManager.Instance.TalkPanelGo0.activeSelf && UIManager.Instance.TalkPanelGo0 != null)
+                    {
+                        UIManager.Instance.CloseTalkPanel();
+                    }
+                    else
+                    {
+                        UIManager.Instance.OpenTalkPanel();
+                    }
                 }
             }
             else
@@ -55,9 +81,9 @@ public class PlayerController : MonoBehaviour
         }
         
         // 新增：空格键触发对话
-        if (Input.GetKeyDown(KeyCode.Space) && currentInteractableNPC != null)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            UIManager.Instance.OpenNPCDialog(currentInteractableNPC);
+            Talk();
         }
 
         // 检查玩家是否按下了Delete键
@@ -91,6 +117,19 @@ public class PlayerController : MonoBehaviour
         {
             currentInteractableNPC = null;
             Debug.Log("离开NPC");
+        }
+    }
+
+    public void Talk()
+    {
+        if (currentInteractableNPC != null)
+        {
+            // 直接打开当前可交互NPC的对话界面
+            UIManager.Instance.OpenNPCDialog(currentInteractableNPC);
+        }
+        else
+        {
+            Debug.Log("附近没有可交互的NPC");
         }
     }
 

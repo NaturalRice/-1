@@ -147,4 +147,15 @@ public class GenerateTexture : MonoBehaviour
     {
         return Mathf.Abs(a.r - b.r) + Mathf.Abs(a.g - b.g) + Mathf.Abs(a.b - b.b);
     }
+    
+    [Header("修真特效")]
+    public GameObject cultivationEffectPrefab; // 新增字段
+
+    public void PlayCultivationEffect(Vector3 position)
+    {
+        if(cultivationEffectPrefab != null){
+            GameObject effect = Instantiate(cultivationEffectPrefab, position, Quaternion.identity);
+            Destroy(effect, 2f);
+        }
+    }
 }

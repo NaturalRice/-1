@@ -62,6 +62,7 @@ public class NPCDynamicSpawner : MonoBehaviour
 
         NPC_AI ai = npc.AddComponent<NPC_AI>();
         ai.Initialize(GetRandomBehavior());
+        ai.InitializeBySect((NPC_AI.SectType)Random.Range(0,3)); // 合并初始化
 
         NPCDialog dialog = npc.AddComponent<NPCDialog>();
         dialog.apiKey = new string[] { "sk-1e2e119a79a14ca1bae80cf4f99a8b0f" }; // 动态注入API Key

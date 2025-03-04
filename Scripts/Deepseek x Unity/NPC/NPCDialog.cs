@@ -10,11 +10,6 @@ using TMPro; // 添加在文件头部
 
 public class NPCDialog : MonoBehaviour
 {
-    // UI元素
-    private DiscussionBubble bubblePrefab;
-    private TMP_InputField inputField;
-    [SerializeField] private Transform bubblesParent;
-    
     // 在 NPC 属性后添加以下字段
     [Header("对话气泡设置")]
     [SerializeField] public Sprite userBubbleSprite; // 用户消息气泡贴图
@@ -29,9 +24,14 @@ public class NPCDialog : MonoBehaviour
     // 设置
     [SerializeField]
     private List<Message> chatPrompts = new List<Message>();
+    
+    [Header("主角NPC对话设置")]
+    [SerializeField] private DiscussionBubble bubblePrefab;
+    [SerializeField] public TMP_InputField inputField; 
+    [SerializeField] public Transform bubblesParent; 
 
     // NPC属性
-    [Header("NPC Settings")]
+    [Header("NPC人设")]
     [SerializeField] public string npcName = "NPC";
     [SerializeField] private string npcRole = "Generic Role";
     [SerializeField] private string npcTask = "Generic Task";
@@ -43,10 +43,7 @@ public class NPCDialog : MonoBehaviour
     {
         // 创建初始消息气泡（该行用于测试）
         //CreateBubble($"你好！我叫{npcName}，是{npcRole}", false);
-        // 动态获取组件
-        inputField = UIManager.Instance.inputField;
-        // 添加空值检查
-        if (inputField == null) Debug.LogError("输入框未分配！");
+        // 动态获取预制体（保持原有逻辑）
         bubblePrefab = Resources.Load<DiscussionBubble>("Prefabs/Discussion Bubble");
         if (bubblePrefab == null) Debug.LogError("无法加载DiscussionBubble预制体");
         // 进行认证
@@ -59,10 +56,18 @@ public class NPCDialog : MonoBehaviour
         //Debug.Log("NPC Name in Start: " + npcName);
         
         // 强制启用 IME 输入
-        Input.imeCompositionMode = IMECompositionMode.On;
+        /*Input.imeCompositionMode = IMECompositionMode.On;
         inputField.onSelect.AddListener((text) => {
             Input.imeCompositionMode = IMECompositionMode.On;
-        });
+        });*/
+    }
+    
+    void Update()
+    {
+        if (bubblesParent == null)
+        {
+            Debug.LogError("气泡父容器在运行时被清空！");
+        }
     }
 
     /// <summary>
@@ -90,13 +95,17 @@ public class NPCDialog : MonoBehaviour
     /// <summary>
     /// 处理用户提问按钮点击事件。
     /// </summary>
+    // NPCDialog.cs
     public async void AskButtonCallback()
     {
-        string playerRequest = inputField.text;
-        CreateBubble(playerRequest, true);
-        await ProcessNPCResponse(playerRequest); // 改为await调用
+        // 动态获取当前活动面板的输入框
+        TMP_InputField currentInputField = UIManager.Instance.inputField; 
+        string playerRequest = currentInputField.text; // 使用当前输入框内容
 
-        inputField.text = "";
+        CreateBubble(playerRequest, true);
+        await ProcessNPCResponse(playerRequest);
+
+        currentInputField.text = ""; // 清空当前输入框
     }
     
     // NPCDialog.cs 需补充方法实现
@@ -140,4 +149,25 @@ public class NPCDialog : MonoBehaviour
 
         onMessageReceived?.Invoke();
     }
+    // NPCDialog.cs 新增方法
+    public void ShowTrainingMenu()
+    {
+        CreateBubble($"选择训练方向：\n1.剑道修行\n2.丹术研习\n3.符法修炼", false);
+    }
+    
+    public void OnTrainingSelected(int option)
+    {
+        NPC_AI ai = GetComponent<NPC_AI>();
+        switch(option){
+            case 1: 
+                ai.attack += 5f;
+                CreateBubble($"{ai.sectType}攻击力提升至{ai.attack}!", false);
+                break;
+            case 2:
+                ai.intelligence += 3f;
+                break;
+        }
+        GenerateTexture.Instance.PlayCultivationEffect(transform.position); // 播放修炼特效
+    }
+    
 }
