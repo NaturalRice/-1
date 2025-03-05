@@ -158,4 +158,24 @@ public class GenerateTexture : MonoBehaviour
             Destroy(effect, 2f);
         }
     }
+    
+    public void PlayCultivationEffect(Vector3 position, NPC_AI.SectType sect) {
+        GameObject effect = Instantiate(GetSectEffect(sect), position, Quaternion.identity);
+        Destroy(effect, 2f);
+    }
+    
+    [Header("门派特效")]
+    public GameObject swordEffect; // 剑宗特效
+    public GameObject alchemyEffect; // 丹宗特效
+    public GameObject talismanEffect; // 符宗特效
+    public GameObject defaultEffect; // 默认特效
+
+    private GameObject GetSectEffect(NPC_AI.SectType sect) {
+        return sect switch {
+            NPC_AI.SectType.剑宗 => swordEffect,
+            NPC_AI.SectType.丹宗 => alchemyEffect,
+            NPC_AI.SectType.符宗 => talismanEffect,
+            _ => defaultEffect
+        };
+    }
 }

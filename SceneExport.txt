@@ -117,6 +117,12 @@
             - intelligence: 8
             - sectType: 剑宗
             - sectColor: RGBA(1.000, 0.000, 0.000, 1.000)
+            - swordWavePrefab: [Error: The variable swordWavePrefab of NPC_AI has not been assigned.
+You probably need to assign the swordWavePrefab variable of the NPC_AI script in the inspector.]
+            - healEffectPrefab: [Error: The variable healEffectPrefab of NPC_AI has not been assigned.
+You probably need to assign the healEffectPrefab variable of the NPC_AI script in the inspector.]
+            - defenseRunePrefab: [Error: The variable defenseRunePrefab of NPC_AI has not been assigned.
+You probably need to assign the defenseRunePrefab variable of the NPC_AI script in the inspector.]
   游戏对象: 丹灵AI
   - 组件:
     - Transform
@@ -205,7 +211,13 @@
             - defense: 5
             - intelligence: 8
             - sectType: 剑宗
-            - sectColor: RGBA(1.000, 0.000, 0.000, 1.000)
+            - sectColor: RGBA(0.016, 1.000, 0.000, 1.000)
+            - swordWavePrefab: [Error: The variable swordWavePrefab of NPC_AI has not been assigned.
+You probably need to assign the swordWavePrefab variable of the NPC_AI script in the inspector.]
+            - healEffectPrefab: [Error: The variable healEffectPrefab of NPC_AI has not been assigned.
+You probably need to assign the healEffectPrefab variable of the NPC_AI script in the inspector.]
+            - defenseRunePrefab: [Error: The variable defenseRunePrefab of NPC_AI has not been assigned.
+You probably need to assign the defenseRunePrefab variable of the NPC_AI script in the inspector.]
   游戏对象: 符灵AI
   - 组件:
     - Transform
@@ -294,7 +306,13 @@
             - defense: 5
             - intelligence: 8
             - sectType: 剑宗
-            - sectColor: RGBA(1.000, 0.000, 0.000, 1.000)
+            - sectColor: RGBA(0.000, 0.210, 1.000, 1.000)
+            - swordWavePrefab: [Error: The variable swordWavePrefab of NPC_AI has not been assigned.
+You probably need to assign the swordWavePrefab variable of the NPC_AI script in the inspector.]
+            - healEffectPrefab: [Error: The variable healEffectPrefab of NPC_AI has not been assigned.
+You probably need to assign the healEffectPrefab variable of the NPC_AI script in the inspector.]
+            - defenseRunePrefab: [Error: The variable defenseRunePrefab of NPC_AI has not been assigned.
+You probably need to assign the defenseRunePrefab variable of the NPC_AI script in the inspector.]
 游戏对象: Main Camera
 - 组件:
   - Transform
@@ -341,7 +359,7 @@
           - transparencySortMode: Default
           - transparencySortAxis: (0.00, 0.00, 1.00)
           - depth: -1
-          - aspect: 1.779716
+          - aspect: 1.777262
           - velocity: (0.00, 0.00, 0.00)
           - cullingMask: -1
           - eventMask: -1
@@ -350,7 +368,7 @@
           - overrideSceneCullingMask: 0
           - layerCullDistances: System.Single[]
           - useOcclusionCulling: False
-          - cullingMatrix: 0.08849	0.00000	0.00000	0.00000
+          - cullingMatrix: 0.08861	0.00000	0.00000	0.00000
 0.00000	0.15748	0.00000	0.00000
 0.00000	0.00000	0.00200	-0.98059
 0.00000	0.00000	0.00000	1.00000
@@ -373,11 +391,11 @@
           - lensShift: (0.00, 0.00)
           - gateFit: Horizontal
           - rect: (x:0.00, y:0.00, width:1.00, height:1.00)
-          - pixelRect: (x:0.00, y:0.00, width:688.75, height:387.00)
-          - pixelWidth: 689
-          - pixelHeight: 387
-          - scaledPixelWidth: 689
-          - scaledPixelHeight: 387
+          - pixelRect: (x:0.00, y:0.00, width:766.00, height:431.00)
+          - pixelWidth: 766
+          - pixelHeight: 431
+          - scaledPixelWidth: 766
+          - scaledPixelHeight: 431
           - targetTexture: null
           - activeTexture: null
           - targetDisplay: 0
@@ -391,18 +409,18 @@
 0.00000	0.00000	-1.00000	-10.00000
 0.00000	0.00000	0.00000	1.00000
 
-          - projectionMatrix: 0.08849	0.00000	0.00000	0.00000
+          - projectionMatrix: 0.08861	0.00000	0.00000	0.00000
 0.00000	0.15748	0.00000	0.00000
 0.00000	0.00000	-0.00200	-1.00060
 0.00000	0.00000	0.00000	1.00000
 
-          - nonJitteredProjectionMatrix: 0.08849	0.00000	0.00000	0.00000
+          - nonJitteredProjectionMatrix: 0.08861	0.00000	0.00000	0.00000
 0.00000	0.15748	0.00000	0.00000
 0.00000	0.00000	-0.00200	-1.00060
 0.00000	0.00000	0.00000	1.00000
 
           - useJitteredProjectionMatrixForTransparentRendering: True
-          - previousViewProjectionMatrix: 0.08849	0.00000	0.00000	0.00000
+          - previousViewProjectionMatrix: 0.08861	0.00000	0.00000	0.00000
 0.00000	-0.15748	0.00000	0.00000
 0.00000	0.00000	-0.00100	0.99030
 0.00000	0.00000	0.00000	1.00000
@@ -927,6 +945,14 @@ You probably need to assign the m_LookAt variable of the CinemachineVirtualCamer
   - GenerateTexture
           - cultivationEffectPrefab: [Error: The variable cultivationEffectPrefab of GenerateTexture has not been assigned.
 You probably need to assign the cultivationEffectPrefab variable of the GenerateTexture script in the inspector.]
+          - swordEffect: [Error: The variable swordEffect of GenerateTexture has not been assigned.
+You probably need to assign the swordEffect variable of the GenerateTexture script in the inspector.]
+          - alchemyEffect: [Error: The variable alchemyEffect of GenerateTexture has not been assigned.
+You probably need to assign the alchemyEffect variable of the GenerateTexture script in the inspector.]
+          - talismanEffect: [Error: The variable talismanEffect of GenerateTexture has not been assigned.
+You probably need to assign the talismanEffect variable of the GenerateTexture script in the inspector.]
+          - defaultEffect: [Error: The variable defaultEffect of GenerateTexture has not been assigned.
+You probably need to assign the defaultEffect variable of the GenerateTexture script in the inspector.]
   游戏对象: NPCSpawner
   - 组件:
     - Transform
@@ -962,6 +988,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
             - spawnInterval: 5
             - spawnArea: (20.00, 20.00)
             - npcSprite: Sprite
+            - sectConfigs: SectConfig[]
   游戏对象: EnemySpawner
   - 组件:
     - Transform
@@ -1009,21 +1036,21 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
 游戏对象: Canvas
 - 组件:
   - RectTransform
-          - rect: (x:-400.00, y:-224.76, width:800.00, height:449.51)
+          - rect: (x:-400.00, y:-225.07, width:800.00, height:450.13)
           - anchorMin: (0.00, 0.00)
           - anchorMax: (0.00, 0.00)
-          - anchoredPosition: (344.38, 193.50)
-          - sizeDelta: (800.00, 449.51)
+          - anchoredPosition: (383.00, 215.50)
+          - sizeDelta: (800.00, 450.13)
           - pivot: (0.50, 0.50)
-          - anchoredPosition3D: (344.38, 193.50, 0.00)
-          - offsetMin: (-55.63, -31.25)
-          - offsetMax: (744.38, 418.26)
+          - anchoredPosition3D: (383.00, 215.50, 0.00)
+          - offsetMin: (-17.00, -9.57)
+          - offsetMax: (783.00, 440.57)
           - drivenByObject: Canvas (Type: Canvas)
   - Canvas
           - renderMode: ScreenSpaceOverlay
           - isRootCanvas: True
-          - pixelRect: (x:0.00, y:0.00, width:688.75, height:387.00)
-          - scaleFactor: 0.8609375
+          - pixelRect: (x:0.00, y:0.00, width:766.00, height:431.00)
+          - scaleFactor: 0.9575
           - referencePixelsPerUnit: 100
           - overridePixelPerfect: False
           - vertexColorAlwaysGammaSpace: False
@@ -1038,7 +1065,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
           - additionalShaderChannels: TexCoord1, Normal, Tangent
           - sortingLayerName: Default
           - rootCanvas: Canvas (Type: Canvas)
-          - renderingDisplaySize: (688.75, 387.00)
+          - renderingDisplaySize: (766.00, 431.00)
           - updateRectTransformForStandalone: Enabled
           - worldCamera: null
           - normalizedSortingGridSize: 0.1
@@ -1070,6 +1097,12 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
           - TalkPanelGo3: Frame_符灵AI (Type: GameObject)
           - talkPanel: Frame_player (Type: GameObject)
           - inputField: Prompt Input Field (Type: TMP_InputField)
+          - trainingButtonPrefab: [Error: The variable trainingButtonPrefab of UIManager has not been assigned.
+You probably need to assign the trainingButtonPrefab variable of the UIManager script in the inspector.]
+          - trainingPanel: [Error: The variable trainingPanel of UIManager has not been assigned.
+You probably need to assign the trainingPanel variable of the UIManager script in the inspector.]
+          - attributePopupPrefab: [Error: The variable attributePopupPrefab of UIManager has not been assigned.
+You probably need to assign the attributePopupPrefab variable of the UIManager script in the inspector.]
   游戏对象: Frame_player
   - 组件:
     - RectTransform
@@ -1664,7 +1697,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
     游戏对象: Discussion Manager
     - 组件:
       - Transform
-              - position: (60.27, 33.69, 0.00)
+              - position: (67.03, 37.76, 0.00)
               - localPosition: (-960.00, -540.00, 0.00)
               - eulerAngles: (0.00, 0.00, 0.00)
               - localEulerAngles: (0.00, 0.00, 0.00)
@@ -1675,19 +1708,19 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
               - localRotation: (0.00000, 0.00000, 0.00000, 1.00000)
               - localScale: (1.00, 1.00, 1.00)
               - parent: Frame_player (Type: RectTransform)
-              - worldToLocalMatrix: 3.37898	0.00000	0.00000	-203.63640
-0.00000	3.37898	0.00000	-113.83270
-0.00000	0.00000	3.37898	0.00000
+              - worldToLocalMatrix: 3.03822	0.00000	0.00000	-203.63640
+0.00000	3.03822	0.00000	-114.73540
+0.00000	0.00000	3.03822	0.00000
 0.00000	0.00000	0.00000	1.00000
 
-              - localToWorldMatrix: 0.29595	0.00000	0.00000	60.26566
-0.00000	0.29595	0.00000	33.68848
-0.00000	0.00000	0.29595	0.00000
+              - localToWorldMatrix: 0.32914	0.00000	0.00000	67.02502
+0.00000	0.32914	0.00000	37.76407
+0.00000	0.00000	0.32914	0.00000
 0.00000	0.00000	0.00000	1.00000
 
               - root: Canvas (Type: RectTransform)
               - childCount: 0
-              - lossyScale: (0.30, 0.30, 0.30)
+              - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
               - hierarchyCapacity: 198
               - hierarchyCount: 198
@@ -2291,7 +2324,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
     游戏对象: Discussion Manager
     - 组件:
       - Transform
-              - position: (60.27, 33.69, 0.00)
+              - position: (67.03, 37.76, 0.00)
               - localPosition: (-960.00, -540.00, 0.00)
               - eulerAngles: (0.00, 0.00, 0.00)
               - localEulerAngles: (0.00, 0.00, 0.00)
@@ -2302,19 +2335,19 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
               - localRotation: (0.00000, 0.00000, 0.00000, 1.00000)
               - localScale: (1.00, 1.00, 1.00)
               - parent: Frame_剑灵AI (Type: RectTransform)
-              - worldToLocalMatrix: 3.37898	0.00000	0.00000	-203.63640
-0.00000	3.37898	0.00000	-113.83270
-0.00000	0.00000	3.37898	0.00000
+              - worldToLocalMatrix: 3.03822	0.00000	0.00000	-203.63640
+0.00000	3.03822	0.00000	-114.73540
+0.00000	0.00000	3.03822	0.00000
 0.00000	0.00000	0.00000	1.00000
 
-              - localToWorldMatrix: 0.29595	0.00000	0.00000	60.26566
-0.00000	0.29595	0.00000	33.68848
-0.00000	0.00000	0.29595	0.00000
+              - localToWorldMatrix: 0.32914	0.00000	0.00000	67.02502
+0.00000	0.32914	0.00000	37.76407
+0.00000	0.00000	0.32914	0.00000
 0.00000	0.00000	0.00000	1.00000
 
               - root: Canvas (Type: RectTransform)
               - childCount: 0
-              - lossyScale: (0.30, 0.30, 0.30)
+              - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
               - hierarchyCapacity: 198
               - hierarchyCount: 198
@@ -2918,7 +2951,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
     游戏对象: Discussion Manager
     - 组件:
       - Transform
-              - position: (60.27, 33.69, 0.00)
+              - position: (67.03, 37.76, 0.00)
               - localPosition: (-960.00, -540.00, 0.00)
               - eulerAngles: (0.00, 0.00, 0.00)
               - localEulerAngles: (0.00, 0.00, 0.00)
@@ -2929,19 +2962,19 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
               - localRotation: (0.00000, 0.00000, 0.00000, 1.00000)
               - localScale: (1.00, 1.00, 1.00)
               - parent: Frame_丹灵AI (Type: RectTransform)
-              - worldToLocalMatrix: 3.37898	0.00000	0.00000	-203.63640
-0.00000	3.37898	0.00000	-113.83270
-0.00000	0.00000	3.37898	0.00000
+              - worldToLocalMatrix: 3.03822	0.00000	0.00000	-203.63640
+0.00000	3.03822	0.00000	-114.73540
+0.00000	0.00000	3.03822	0.00000
 0.00000	0.00000	0.00000	1.00000
 
-              - localToWorldMatrix: 0.29595	0.00000	0.00000	60.26566
-0.00000	0.29595	0.00000	33.68848
-0.00000	0.00000	0.29595	0.00000
+              - localToWorldMatrix: 0.32914	0.00000	0.00000	67.02502
+0.00000	0.32914	0.00000	37.76407
+0.00000	0.00000	0.32914	0.00000
 0.00000	0.00000	0.00000	1.00000
 
               - root: Canvas (Type: RectTransform)
               - childCount: 0
-              - lossyScale: (0.30, 0.30, 0.30)
+              - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
               - hierarchyCapacity: 198
               - hierarchyCount: 198
@@ -3545,7 +3578,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
     游戏对象: Discussion Manager
     - 组件:
       - Transform
-              - position: (60.27, 33.69, 0.00)
+              - position: (67.03, 37.76, 0.00)
               - localPosition: (-960.00, -540.00, 0.00)
               - eulerAngles: (0.00, 0.00, 0.00)
               - localEulerAngles: (0.00, 0.00, 0.00)
@@ -3556,19 +3589,19 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
               - localRotation: (0.00000, 0.00000, 0.00000, 1.00000)
               - localScale: (1.00, 1.00, 1.00)
               - parent: Frame_符灵AI (Type: RectTransform)
-              - worldToLocalMatrix: 3.37898	0.00000	0.00000	-203.63640
-0.00000	3.37898	0.00000	-113.83270
-0.00000	0.00000	3.37898	0.00000
+              - worldToLocalMatrix: 3.03822	0.00000	0.00000	-203.63640
+0.00000	3.03822	0.00000	-114.73540
+0.00000	0.00000	3.03822	0.00000
 0.00000	0.00000	0.00000	1.00000
 
-              - localToWorldMatrix: 0.29595	0.00000	0.00000	60.26566
-0.00000	0.29595	0.00000	33.68848
-0.00000	0.00000	0.29595	0.00000
+              - localToWorldMatrix: 0.32914	0.00000	0.00000	67.02502
+0.00000	0.32914	0.00000	37.76407
+0.00000	0.00000	0.32914	0.00000
 0.00000	0.00000	0.00000	1.00000
 
               - root: Canvas (Type: RectTransform)
               - childCount: 0
-              - lossyScale: (0.30, 0.30, 0.30)
+              - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
               - hierarchyCapacity: 198
               - hierarchyCount: 198
@@ -3770,12 +3803,12 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
               - verticalOverflow: Truncate
               - lineSpacing: 1
               - fontStyle: Bold
-              - pixelsPerUnit: 0.8609375
+              - pixelsPerUnit: 0.9575
               - minWidth: 0
-              - preferredWidth: 355.4265
+              - preferredWidth: 357.1802
               - flexibleWidth: -1
               - minHeight: 0
-              - preferredHeight: 59.23775
+              - preferredHeight: 127.4151
               - flexibleHeight: -1
               - layoutPriority: 0
     游戏对象: Img_HPBar
@@ -4112,7 +4145,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
   游戏对象: BackpackUI
   - 组件:
     - RectTransform
-            - rect: (x:-960.00, y:-539.54, width:1920.00, height:1079.09)
+            - rect: (x:-960.00, y:-539.85, width:1920.00, height:1079.71)
             - anchorMin: (0.00, 0.00)
             - anchorMax: (1.00, 1.00)
             - anchoredPosition: (0.00, 0.00)
@@ -7627,7 +7660,7 @@ You probably need to assign the cultivationEffectPrefab variable of the Generate
   游戏对象: ToolbarUI
   - 组件:
     - RectTransform
-            - rect: (x:-960.00, y:-539.54, width:1920.00, height:1079.09)
+            - rect: (x:-960.00, y:-539.85, width:1920.00, height:1079.71)
             - anchorMin: (0.00, 0.00)
             - anchorMax: (1.00, 1.00)
             - anchoredPosition: (0.00, 0.00)

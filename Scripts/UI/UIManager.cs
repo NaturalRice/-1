@@ -22,6 +22,10 @@ public class UIManager : MonoBehaviour
     public TMP_InputField inputField; // 输入框引用
 
     private NPCDialog activeNPC; // 当前对话的NPC
+    
+    [Header("训练系统")]
+    public GameObject trainingButtonPrefab; // 新增字段：按钮预制体
+    public Transform trainingPanel;         // 新增字段：按钮容器
 
     void Awake()
     {
@@ -154,9 +158,44 @@ public class UIManager : MonoBehaviour
             RectTransform.Axis.Horizontal, fillPercent * originalSize);
     }
     
-    // 新增方法
-    private void ShowTrainingButtons(params string[] buttons)
+    public void ShowTrainingButtons(params string[] buttons) 
     {
-        // 具体按钮生成逻辑
+        // 清空现有按钮
+        foreach(Transform child in trainingPanel){
+            Destroy(child.gameObject);
+        }
+
+        // 生成新按钮
+        foreach (var btnText in buttons) 
+        {
+            GameObject btn = Instantiate(trainingButtonPrefab, trainingPanel);
+            btn.GetComponentInChildren<TextMeshProUGUI>().text = btnText;
+            
+            // 添加按钮点击监听
+            Button buttonComp = btn.GetComponent<Button>();
+            int index = System.Array.IndexOf(buttons, btnText) + 1;
+            buttonComp.onClick.AddListener(() => {
+                activeNPC.OnTrainingSelected(index);
+            });
+        }
+    }
+
+    
+    // 临时添加测试按钮（在UIManager.cs中）
+    void OnGUI() {
+        if(GUILayout.Button("模拟训练")) {
+            activeNPC.OnTrainingSelected(1); // 触发剑道训练
+        }
+    }
+    
+    [Header("UI预制体")]
+    public GameObject attributePopupPrefab; // 属性变化提示
+
+    public void ShowAttributeChange(string attribute, float value) {
+        if(attributePopupPrefab != null) {
+            GameObject popup = Instantiate(attributePopupPrefab, transform);
+            popup.GetComponent<TextMeshProUGUI>().text = $"{attribute}+{value}";
+            Destroy(popup, 1.5f);
+        }
     }
 }

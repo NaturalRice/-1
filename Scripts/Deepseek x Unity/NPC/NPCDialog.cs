@@ -155,19 +155,22 @@ public class NPCDialog : MonoBehaviour
         CreateBubble($"选择训练方向：\n1.剑道修行\n2.丹术研习\n3.符法修炼", false);
     }
     
-    public void OnTrainingSelected(int option)
-    {
-        NPC_AI ai = GetComponent<NPC_AI>();
-        switch(option){
-            case 1: 
-                ai.attack += 5f;
-                CreateBubble($"{ai.sectType}攻击力提升至{ai.attack}!", false);
-                break;
-            case 2:
-                ai.intelligence += 3f;
-                break;
+    public void OnTrainingSelected(int option) {
+        if(InventoryManager.Instance.HasItem(ItemType.灵石)){
+            InventoryManager.Instance.UseItem(ItemType.灵石,1);
+            NPC_AI ai = GetComponent<NPC_AI>();
+            switch(option){
+                case 1: 
+                    ai.attack += 5f;
+                    CreateBubble($"{ai.sectType}攻击力提升至{ai.attack}!", false);
+                    break;
+                case 2:
+                    ai.intelligence += 3f;
+                    break;
+            }
+            GenerateTexture.Instance.PlayCultivationEffect(transform.position, ai.sectType);
+        } else {
+            CreateBubble("灵石不足无法修炼！", false);
         }
-        GenerateTexture.Instance.PlayCultivationEffect(transform.position); // 播放修炼特效
     }
-    
 }

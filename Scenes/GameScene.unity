@@ -6546,6 +6546,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   detectionRange: 5
+  attack: 10
+  defense: 5
+  intelligence: 8
+  sectType: 0
+  sectColor: {r: 0.015563965, g: 1, b: 0, a: 1}
+  swordWavePrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  defenseRunePrefab: {fileID: 0}
 --- !u!1 &878610940
 GameObject:
   m_ObjectHideFlags: 0
@@ -7865,6 +7873,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   detectionRange: 5
+  attack: 10
+  defense: 5
+  intelligence: 8
+  sectType: 0
+  sectColor: {r: 1, g: 0, b: 0, a: 1}
+  swordWavePrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  defenseRunePrefab: {fileID: 0}
 --- !u!1 &1023690285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8097,6 +8113,11 @@ MonoBehaviour:
   apiKey:
   - sk-1e2e119a79a14ca1bae80cf4f99a8b0f
   npcDialog: {fileID: 8581531768574583870}
+  cultivationEffectPrefab: {fileID: 0}
+  swordEffect: {fileID: 0}
+  alchemyEffect: {fileID: 0}
+  talismanEffect: {fileID: 0}
+  defaultEffect: {fileID: 0}
 --- !u!1 &1068827673
 GameObject:
   m_ObjectHideFlags: 0
@@ -10643,6 +10664,9 @@ MonoBehaviour:
   TalkPanelGo3: {fileID: 1173209858}
   talkPanel: {fileID: 5337218303994173706}
   inputField: {fileID: 4782408539962791336}
+  trainingButtonPrefab: {fileID: 0}
+  trainingPanel: {fileID: 0}
+  attributePopupPrefab: {fileID: 0}
 --- !u!114 &1447706179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14671,6 +14695,7 @@ MonoBehaviour:
   spawnInterval: 5
   spawnArea: {x: 20, y: 20}
   npcSprite: {fileID: -815637142, guid: 3b2e539a4b4a27548a70084090e1ea7e, type: 3}
+  sectConfigs: []
 --- !u!4 &1792326105
 Transform:
   m_ObjectHideFlags: 0
@@ -17209,6 +17234,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   detectionRange: 5
+  attack: 10
+  defense: 5
+  intelligence: 8
+  sectType: 0
+  sectColor: {r: 0, g: 0.21029115, b: 1, a: 1}
+  swordWavePrefab: {fileID: 0}
+  healEffectPrefab: {fileID: 0}
+  defenseRunePrefab: {fileID: 0}
 --- !u!1 &2095973206
 GameObject:
   m_ObjectHideFlags: 0

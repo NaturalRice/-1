@@ -59,4 +59,34 @@ public class NPC_AI : MonoBehaviour
         GetComponent<SpriteRenderer>().color = 
             Color.Lerp(Color.white, sectColor, attack/100f);
     }
+    
+    public void ExecuteSectSkill() {
+        switch(sectType) {
+            case SectType.剑宗:
+                Instantiate(swordWavePrefab, transform.position, Quaternion.identity);
+                break;
+            case SectType.丹宗:
+                Instantiate(healEffectPrefab, transform.position, Quaternion.identity);
+                break;
+            case NPC_AI.SectType.符宗:
+                Instantiate(defenseRunePrefab, transform.position, Quaternion.identity);
+                //ApplyDefenseBuff(); // 添加防御增益逻辑
+                break;
+        }
+    }
+    
+    // 修改 NPC_AI.cs
+    [Header("技能预制体")]
+    public GameObject swordWavePrefab; // 剑宗技能
+    public GameObject healEffectPrefab; // 丹宗技能
+    public GameObject defenseRunePrefab; // 符宗技能
+
+    public void HealAllies(Vector3 position, float radius) {
+        Collider2D[] allies = Physics2D.OverlapCircleAll(position, radius);
+        foreach(var ally in allies) {
+            if(ally.CompareTag("Ally")) {
+                ally.GetComponent<Health>().Heal(5f);
+            }
+        }
+    }
 }

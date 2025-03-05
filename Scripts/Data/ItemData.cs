@@ -8,7 +8,8 @@ public enum ItemType
     Seed_Carrot,
     Seed_Tomato,
     Hoe,
-    CustomAIItem // 新增动态生成道具类型
+    CustomAIItem,
+    灵石
 }
 [CreateAssetMenu()]
 public class ItemData :ScriptableObject

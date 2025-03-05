@@ -83,4 +83,13 @@ public class InventoryManager : MonoBehaviour
             itemDataDict.Add(itemData.type, itemData);
         }
     }
+    
+    public bool HasItem(ItemType type) {
+        return backpack.slotList.Exists(slot => slot.item?.type == type);
+    }
+
+    public void UseItem(ItemType type, int count) {
+        SlotData slot = backpack.slotList.Find(s => s.item?.type == type);
+        if (slot != null) slot.Reduce(count);
+    }
 }

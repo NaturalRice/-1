@@ -85,6 +85,10 @@ public class PlayerController : MonoBehaviour
         {
             Talk();
         }
+        
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            currentInteractableNPC?.GetComponent<NPC_AI>().ExecuteSectSkill();
+        }
 
         // 检查玩家是否按下了Delete键
         if (Input.GetKeyDown(KeyCode.Delete))

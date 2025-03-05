@@ -18,12 +18,17 @@ public class NPCDynamicSpawner : MonoBehaviour
     public Vector2 spawnArea = new Vector2(20, 20);
     
     public Sprite npcSprite; // 直接引用贴图
+    
+    public SectConfig[] sectConfigs;
 
     private List<GameObject> activeNPCs = new List<GameObject>();
 
     void Start()
     {
         InvokeRepeating(nameof(SpawnNPC), 0f, spawnInterval);
+        
+        // 测试生成100个NPC
+        for(int i=0; i<100; i++) SpawnNPC(); 
     }
 
     void Update()
@@ -70,6 +75,24 @@ public class NPCDynamicSpawner : MonoBehaviour
         
         npc.AddComponent<NPCLifeTracker>().OnDestroyed += () => activeNPCs.Remove(npc);
         activeNPCs.Add(npc);
+        
+        Debug.Log($"生成{ai.sectType}门派NPC，攻击力：{ai.attack}，颜色：{ai.sectColor}");
+        
+        SectConfig config = sectConfigs[Random.Range(0, sectConfigs.Length)];// 随机选择一个门派配置
+        ai.InitializeBySect(config.sectType); // 使用配置初始化NPC
+        ai.sectColor = config.sectColor; // 设置门派颜色
+        
+        switch(config.sectType) {
+            case NPC_AI.SectType.剑宗: 
+                renderer.sprite = Resources.Load<Sprite>("Sprites/NPC/剑宗");
+                break;
+            case NPC_AI.SectType.丹宗:
+                renderer.sprite = Resources.Load<Sprite>("Sprites/NPC/丹宗");
+                break;
+            case NPC_AI.SectType.符宗:
+                renderer.sprite = Resources.Load<Sprite>("Sprites/NPC/符宗");
+                break;
+        }
     }
 
     public Vector2 GetValidSpawnPosition()
@@ -86,12 +109,6 @@ public class NPCDynamicSpawner : MonoBehaviour
         } while (Physics2D.OverlapCircle(pos, 1f) != null && attempts < 50);
 
         return pos;
-    }
-
-    Sprite LoadRandomNPCSprite()
-    {
-        Sprite[] sprites = Resources.LoadAll<Sprite>("NPCs");
-        return sprites.Length > 0 ? sprites[Random.Range(0, sprites.Length)] : null;
     }
 
     NPCBehavior GetRandomBehavior()
@@ -131,21 +148,6 @@ public class NPCDynamicSpawner : MonoBehaviour
         {
             if (npc != null) Destroy(npc);
         }
-    }
-
-    public void SaveNPCs()
-    {
-        List<NPCSaveData> saveData = new List<NPCSaveData>();
-        foreach (var npc in activeNPCs)
-        {
-            saveData.Add(new NPCSaveData
-            {
-                position = npc.transform.position,
-                spritePath = npc.GetComponent<SpriteRenderer>().sprite.name
-            });
-        }
-        string json = JsonUtility.ToJson(saveData);
-        PlayerPrefs.SetString("NPCData", json);
     }
 }
 
