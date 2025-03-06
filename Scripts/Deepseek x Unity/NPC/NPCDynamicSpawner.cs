@@ -10,6 +10,10 @@ using NUnit.Framework;            // 测试框架
 using UnityEngine;
 using System.Collections.Generic;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class NPCDynamicSpawner : MonoBehaviour
 {
     [Header("生成设置")]
@@ -93,6 +97,17 @@ public class NPCDynamicSpawner : MonoBehaviour
                 renderer.sprite = Resources.Load<Sprite>("Sprites/NPC/符宗");
                 break;
         }
+        
+        // 加载对应门派贴图
+        string spritePath = $"Sprites/Sects/{config.sectType}";
+        Sprite sectSprite = Resources.Load<Sprite>(spritePath);
+    
+        // 动态设置SpriteRenderer
+        SpriteRenderer Renderer = npc.AddComponent<SpriteRenderer>();
+        Renderer.sprite = sectSprite;
+    
+        // 动态设置颜色（从配置读取）
+        Renderer.color = config.sectColor;
     }
 
     public Vector2 GetValidSpawnPosition()
@@ -149,6 +164,19 @@ public class NPCDynamicSpawner : MonoBehaviour
             if (npc != null) Destroy(npc);
         }
     }
+    
+    // 自动生成门派配置的工具类
+#if UNITY_EDITOR
+public static class SectConfigGenerator {
+    public static void GenerateConfig(NPC_AI.SectType type, Color color) {
+        var config = ScriptableObject.CreateInstance<SectConfig>();
+        config.sectType = type;
+        config.sectColor = color;
+        UnityEditor.AssetDatabase.CreateAsset(config, $"Assets/Resources/Data/{type}Config.asset");
+    }
+}
+#endif
+    
 }
 
 [System.Serializable]

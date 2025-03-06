@@ -198,4 +198,23 @@ public class UIManager : MonoBehaviour
             Destroy(popup, 1.5f);
         }
     }
+    
+    // UIManager.cs
+    public void CreateTrainingMenu(NPC_AI.SectType sect) {
+        // 动态加载按钮预制件
+        GameObject buttonPrefab = Resources.Load<GameObject>("UI/TrainingButton");
+    
+        // 生成三个选项按钮
+        string[] options = {"剑道修行", "丹术研习", "符法修炼"};
+        for(int i=0; i<options.Length; i++){
+            int index = i + 1; // 将索引转换为1-based
+            GameObject btn = Instantiate(buttonPrefab, trainingPanel);
+            btn.GetComponentInChildren<TextMeshProUGUI>().text = options[i];
+            btn.GetComponent<Button>().onClick.AddListener(() => activeNPC.OnTrainingSelected(index));
+        }
+    
+        // 动态加载气泡背景图
+        Sprite bubbleSprite = Resources.Load<Sprite>("UI/Bubble");
+        GetComponent<Image>().sprite = bubbleSprite;
+    }
 }

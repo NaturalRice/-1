@@ -73,6 +73,15 @@ public class NPC_AI : MonoBehaviour
                 //ApplyDefenseBuff(); // 添加防御增益逻辑
                 break;
         }
+        
+        // 动态加载预制件
+        GameObject effectPrefab = Resources.Load<GameObject>($"Prefabs/{sectType}Skill");
+        Instantiate(effectPrefab, transform.position, Quaternion.identity);
+    
+        // 动态创建粒子系统（可选）
+        GameObject particles = new GameObject("SkillParticles");
+        var mainModule = particles.AddComponent<ParticleSystem>().main;
+        mainModule.startColor = sectColor;
     }
     
     // 修改 NPC_AI.cs

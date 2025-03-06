@@ -1644,6 +1644,182 @@ You probably need to assign the attributePopupPrefab variable of the UIManager s
                   - verticalFit: PreferredSize
           - VerticalLayoutGroup
           - ContentAutoScroll
+          游戏对象: Discussion Bubble(Clone)
+          - 组件:
+            - RectTransform
+                    - rect: (x:-346.95, y:0.00, width:693.91, height:0.00)
+                    - anchorMin: (0.00, 1.00)
+                    - anchorMax: (0.00, 1.00)
+                    - anchoredPosition: (376.95, -130.55)
+                    - sizeDelta: (693.91, 0.00)
+                    - pivot: (0.50, 0.50)
+                    - anchoredPosition3D: (376.95, -130.55, 0.00)
+                    - offsetMin: (30.00, -130.55)
+                    - offsetMax: (723.91, -130.55)
+                    - drivenByObject: null
+            - CanvasRenderer
+                    - hasPopInstruction: False
+                    - materialCount: 0
+                    - popMaterialCount: 0
+                    - absoluteDepth: -1
+                    - hasMoved: False
+                    - cullTransparentMesh: True
+                    - hasRectClipping: False
+                    - relativeDepth: -1
+                    - cull: False
+                    - isMask: False
+                    - clippingSoftness: (0.00, 0.00)
+            - Image
+                    - sprite: Sprite
+                    - overrideSprite: Sprite
+                    - type: Sliced
+                    - preserveAspect: False
+                    - fillCenter: True
+                    - fillMethod: Radial360
+                    - fillAmount: 1
+                    - fillClockwise: True
+                    - fillOrigin: 0
+                    - eventAlphaThreshold: 1
+                    - alphaHitTestMinimumThreshold: 0
+                    - useSpriteMesh: False
+                    - mainTexture: Texture2D
+                    - hasBorder: False
+                    - pixelsPerUnitMultiplier: 1
+                    - pixelsPerUnit: 1
+                    - material: Material
+                    - minWidth: 0
+                    - preferredWidth: 0
+                    - flexibleWidth: -1
+                    - minHeight: 0
+                    - preferredHeight: 0
+                    - flexibleHeight: -1
+                    - layoutPriority: 0
+            - ContentSizeFitter
+                    - horizontalFit: Unconstrained
+                    - verticalFit: PreferredSize
+            - VerticalLayoutGroup
+            - DiscussionBubble
+                    - messageText: Message (Type: TextMeshProUGUI)
+                    - bubbleImage: Discussion Bubble(Clone) (Type: Image)
+            游戏对象: Message
+            - 组件:
+              - RectTransform
+                      - rect: (x:0.00, y:0.00, width:0.00, height:0.00)
+                      - anchorMin: (0.00, 0.00)
+                      - anchorMax: (0.00, 0.00)
+                      - anchoredPosition: (0.00, 0.00)
+                      - sizeDelta: (0.00, 0.00)
+                      - pivot: (0.50, 0.50)
+                      - anchoredPosition3D: (0.00, 0.00, 0.00)
+                      - offsetMin: (0.00, 0.00)
+                      - offsetMax: (0.00, 0.00)
+                      - drivenByObject: null
+              - CanvasRenderer
+                      - hasPopInstruction: False
+                      - materialCount: 0
+                      - popMaterialCount: 0
+                      - absoluteDepth: -1
+                      - hasMoved: False
+                      - cullTransparentMesh: True
+                      - hasRectClipping: False
+                      - relativeDepth: -1
+                      - cull: False
+                      - isMask: False
+                      - clippingSoftness: (0.00, 0.00)
+              - TextMeshProUGUI
+                      - materialForRendering: Material
+                      - autoSizeTextContainer: False
+                      - mesh: null
+                      - canvasRenderer: Message (Type: CanvasRenderer)
+                      - maskOffset: (0.00, 0.00, 0.00, 0.00)
+          游戏对象: Discussion Bubble(Clone)
+          - 组件:
+            - RectTransform
+                    - rect: (x:-346.95, y:0.00, width:693.91, height:0.00)
+                    - anchorMin: (0.00, 1.00)
+                    - anchorMax: (0.00, 1.00)
+                    - anchoredPosition: (376.95, -130.55)
+                    - sizeDelta: (693.91, 0.00)
+                    - pivot: (0.50, 0.50)
+                    - anchoredPosition3D: (376.95, -130.55, 0.00)
+                    - offsetMin: (30.00, -130.55)
+                    - offsetMax: (723.91, -130.55)
+                    - drivenByObject: null
+            - CanvasRenderer
+                    - hasPopInstruction: False
+                    - materialCount: 0
+                    - popMaterialCount: 0
+                    - absoluteDepth: -1
+                    - hasMoved: False
+                    - cullTransparentMesh: True
+                    - hasRectClipping: False
+                    - relativeDepth: -1
+                    - cull: False
+                    - isMask: False
+                    - clippingSoftness: (0.00, 0.00)
+            - Image
+                    - sprite: Sprite
+                    - overrideSprite: Sprite
+                    - type: Sliced
+                    - preserveAspect: False
+                    - fillCenter: True
+                    - fillMethod: Radial360
+                    - fillAmount: 1
+                    - fillClockwise: True
+                    - fillOrigin: 0
+                    - eventAlphaThreshold: 1
+                    - alphaHitTestMinimumThreshold: 0
+                    - useSpriteMesh: False
+                    - mainTexture: Texture2D
+                    - hasBorder: False
+                    - pixelsPerUnitMultiplier: 1
+                    - pixelsPerUnit: 1
+                    - material: Material
+                    - minWidth: 0
+                    - preferredWidth: 0
+                    - flexibleWidth: -1
+                    - minHeight: 0
+                    - preferredHeight: 0
+                    - flexibleHeight: -1
+                    - layoutPriority: 0
+            - ContentSizeFitter
+                    - horizontalFit: Unconstrained
+                    - verticalFit: PreferredSize
+            - VerticalLayoutGroup
+            - DiscussionBubble
+                    - messageText: Message (Type: TextMeshProUGUI)
+                    - bubbleImage: Discussion Bubble(Clone) (Type: Image)
+            游戏对象: Message
+            - 组件:
+              - RectTransform
+                      - rect: (x:0.00, y:0.00, width:0.00, height:0.00)
+                      - anchorMin: (0.00, 0.00)
+                      - anchorMax: (0.00, 0.00)
+                      - anchoredPosition: (0.00, 0.00)
+                      - sizeDelta: (0.00, 0.00)
+                      - pivot: (0.50, 0.50)
+                      - anchoredPosition3D: (0.00, 0.00, 0.00)
+                      - offsetMin: (0.00, 0.00)
+                      - offsetMax: (0.00, 0.00)
+                      - drivenByObject: null
+              - CanvasRenderer
+                      - hasPopInstruction: False
+                      - materialCount: 0
+                      - popMaterialCount: 0
+                      - absoluteDepth: -1
+                      - hasMoved: False
+                      - cullTransparentMesh: True
+                      - hasRectClipping: False
+                      - relativeDepth: -1
+                      - cull: False
+                      - isMask: False
+                      - clippingSoftness: (0.00, 0.00)
+              - TextMeshProUGUI
+                      - materialForRendering: Material
+                      - autoSizeTextContainer: False
+                      - mesh: null
+                      - canvasRenderer: Message (Type: CanvasRenderer)
+                      - maskOffset: (0.00, 0.00, 0.00, 0.00)
     游戏对象: Frame Outline
     - 组件:
       - RectTransform
@@ -1722,8 +1898,8 @@ You probably need to assign the attributePopupPrefab variable of the UIManager s
               - childCount: 0
               - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
-              - hierarchyCapacity: 198
-              - hierarchyCount: 198
+              - hierarchyCapacity: 202
+              - hierarchyCount: 202
       - NPCDialog
               - userBubbleSprite: Sprite
               - apiKey: System.String[]
@@ -2349,14 +2525,14 @@ You probably need to assign the attributePopupPrefab variable of the UIManager s
               - childCount: 0
               - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
-              - hierarchyCapacity: 198
-              - hierarchyCount: 198
+              - hierarchyCapacity: 202
+              - hierarchyCount: 202
       - NPCDialog
               - userBubbleSprite: Sprite
               - apiKey: System.String[]
               - inputField: Prompt Input Field (Type: TMP_InputField)
               - bubblesParent: Content (Type: RectTransform)
-              - npcName: NPC
+              - npcName: 剑灵AI
   游戏对象: Frame_丹灵AI
   - 组件:
     - RectTransform
@@ -2976,14 +3152,14 @@ You probably need to assign the attributePopupPrefab variable of the UIManager s
               - childCount: 0
               - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
-              - hierarchyCapacity: 198
-              - hierarchyCount: 198
+              - hierarchyCapacity: 202
+              - hierarchyCount: 202
       - NPCDialog
               - userBubbleSprite: Sprite
               - apiKey: System.String[]
               - inputField: Prompt Input Field (Type: TMP_InputField)
               - bubblesParent: Content (Type: RectTransform)
-              - npcName: NPC
+              - npcName: 丹灵AI
   游戏对象: Frame_符灵AI
   - 组件:
     - RectTransform
@@ -3603,14 +3779,14 @@ You probably need to assign the attributePopupPrefab variable of the UIManager s
               - childCount: 0
               - lossyScale: (0.33, 0.33, 0.33)
               - hasChanged: True
-              - hierarchyCapacity: 198
-              - hierarchyCount: 198
+              - hierarchyCapacity: 202
+              - hierarchyCount: 202
       - NPCDialog
               - userBubbleSprite: Sprite
               - apiKey: System.String[]
               - inputField: Prompt Input Field (Type: TMP_InputField)
               - bubblesParent: Content (Type: RectTransform)
-              - npcName: NPC
+              - npcName: 符灵AI
   游戏对象: Img_Head
   - 组件:
     - RectTransform
@@ -11888,3 +12064,70 @@ You probably need to assign the m_FirstSelected variable of the EventSystem scri
             - inputField: Prompt Input Field (Type: TMP_InputField)
             - bubblesParent: Content (Type: RectTransform)
             - npcName: 符灵AI
+游戏对象: Animation
+- 组件:
+  - Transform
+          - position: (0.00, 3.05, 0.02)
+          - localPosition: (0.00, 3.05, 0.02)
+          - eulerAngles: (0.00, 0.00, 0.00)
+          - localEulerAngles: (0.00, 0.00, 0.00)
+          - right: (1.00, 0.00, 0.00)
+          - up: (0.00, 1.00, 0.00)
+          - forward: (0.00, 0.00, 1.00)
+          - rotation: (0.00000, 0.00000, 0.00000, 1.00000)
+          - localRotation: (0.00000, 0.00000, 0.00000, 1.00000)
+          - localScale: (1.00, 1.00, 1.00)
+          - parent: null
+          - worldToLocalMatrix: 1.00000	0.00000	0.00000	0.00154
+0.00000	1.00000	0.00000	-3.05301
+0.00000	0.00000	1.00000	-0.01637
+0.00000	0.00000	0.00000	1.00000
+
+          - localToWorldMatrix: 1.00000	0.00000	0.00000	-0.00154
+0.00000	1.00000	0.00000	3.05301
+0.00000	0.00000	1.00000	0.01637
+0.00000	0.00000	0.00000	1.00000
+
+          - root: Animation (Type: Transform)
+          - childCount: 1
+          - lossyScale: (1.00, 1.00, 1.00)
+          - hasChanged: True
+          - hierarchyCapacity: 2
+          - hierarchyCount: 2
+  - Variables
+          - declarations: Unity.VisualScripting.VariableDeclarations
+  - ScriptMachine
+  游戏对象: VisualScripting SceneVariables
+  - 组件:
+    - Transform
+            - position: (0.00, 0.00, 0.00)
+            - localPosition: (0.00, -3.05, -0.02)
+            - eulerAngles: (0.00, 0.00, 0.00)
+            - localEulerAngles: (0.00, 0.00, 0.00)
+            - right: (1.00, 0.00, 0.00)
+            - up: (0.00, 1.00, 0.00)
+            - forward: (0.00, 0.00, 1.00)
+            - rotation: (0.00000, 0.00000, 0.00000, 1.00000)
+            - localRotation: (0.00000, 0.00000, 0.00000, 1.00000)
+            - localScale: (1.00, 1.00, 1.00)
+            - parent: Animation (Type: Transform)
+            - worldToLocalMatrix: 1.00000	0.00000	0.00000	0.00000
+0.00000	1.00000	0.00000	0.00000
+0.00000	0.00000	1.00000	0.00000
+0.00000	0.00000	0.00000	1.00000
+
+            - localToWorldMatrix: 1.00000	0.00000	0.00000	0.00000
+0.00000	1.00000	0.00000	0.00000
+0.00000	0.00000	1.00000	0.00000
+0.00000	0.00000	0.00000	1.00000
+
+            - root: Animation (Type: Transform)
+            - childCount: 0
+            - lossyScale: (1.00, 1.00, 1.00)
+            - hasChanged: True
+            - hierarchyCapacity: 2
+            - hierarchyCount: 2
+    - Variables
+            - declarations: Unity.VisualScripting.VariableDeclarations
+    - SceneVariables
+            - variables: VisualScripting SceneVariables (Type: Variables)
